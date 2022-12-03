@@ -42,6 +42,8 @@ for scholarship in range(len(scholarshipReqs)):
 # Add scholarship names and reqs into the dataframe
 df['Scholarship Name'] = pd.Series(scholarshipNameList)
 df['Scholarship Requirements'] = pd.Series(scholarshipReqsList)
+# Drop any scholarships with names but not requirements, and vice versa
+df = df.dropna(how='any',axis=0) 
 
 ## Data Export
 
