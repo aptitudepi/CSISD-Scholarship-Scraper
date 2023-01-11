@@ -2,7 +2,6 @@
 
 ## Imports/Setup:
 from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.edge.service import Service as EdgeService
 from webdriver_manager.microsoft import EdgeChromiumDriverManager
 from selenium.webdriver.common.by import By
