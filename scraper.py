@@ -25,14 +25,14 @@ df = pd.DataFrame(columns=['Scholarship Name','Scholarship Requirements'])
 ## Data Processing
 # Get scholarship names into an array
 scholarshipNameList = []
-for scholarship in range(len(scholarshipName)):
-	scholarshipNameList.append(scholarshipName[scholarship].text)
+for scholarship, item in enumerate(scholarshipName):
+	scholarshipNameList.append(item.text)
 
 # Get scholarship requirements into an array
 scholarshipReqsList = []
-for scholarship in range(len(scholarshipReqs)):
-	if "\n" in scholarshipReqs[scholarship].text:
-		soup = BeautifulSoup(scholarshipReqs[scholarship].text.split("\n")[1], "html.parser")
+for scholarship, item in enumerate(scholarshipReqs):
+	if "\n" in item.text:
+		soup = BeautifulSoup(item.text.split("\n")[1], "html.parser")
 		for data in soup(['style', 'script']):
 			data.decompose()
 		soup = ' '.join(soup.stripped_strings)
