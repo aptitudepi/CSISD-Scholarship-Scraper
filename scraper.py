@@ -3,8 +3,8 @@
 ## Imports/Setup:
 from selenium import webdriver
 from selenium.webdriver.edge.service import Service as EdgeService
-from webdriver_manager.microsoft import EdgeChromiumDriverManager
 from selenium.webdriver.common.by import By
+from webdriver_manager.microsoft import EdgeChromiumDriverManager
 import pandas as pd
 from bs4 import BeautifulSoup
 
